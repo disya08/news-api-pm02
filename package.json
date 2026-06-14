@@ -32,7 +32,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "knex": "^3.2.10",
-    "pg": "^8.3.3"
+    "pg": "^8.3.3",
+    "serverless-http": "^4.0.0"
   },
   "devDependencies": {
     "jest": "^30.4.2",
