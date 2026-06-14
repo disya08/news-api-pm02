@@ -4,8 +4,10 @@
   "description": "bc-nc-news",
   "main": "index.js",
   "jest": {
-  "setupFilesAfterEnv": ["jest-sorted"]
-},
+    "setupFilesAfterEnv": [
+      "jest-sorted"
+    ]
+  },
   "scripts": {
     "setup-dbs": "psql -f ./db/setup.sql",
     "seed-dev": "psql -f ./db/setup.sql && knex migrate:rollback && knex migrate:latest && knex seed:run",
@@ -29,11 +31,11 @@
   "homepage": "https://github.com/northcoders/be-nc-news#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "knex": "^0.21.5",
+    "knex": "^3.2.10",
     "pg": "^8.3.3"
   },
   "devDependencies": {
-    "jest": "^26.4.2",
+    "jest": "^30.4.2",
     "jest-sorted": "^1.0.6",
     "supertest": "^4.0.2"
   }
