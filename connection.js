@@ -1,4 +1,11 @@
-const config = require("../knexfile");
-const knex = require("knex")(config);
+const knex = require('knex');
 
-module.exports = knex;
+const config = {
+  client: 'pg',
+  connection: process.env.DATABASE_URL,
+  pool: { min: 0, max: 7 }
+};
+
+const db = knex(config);
+
+module.exports = db;
